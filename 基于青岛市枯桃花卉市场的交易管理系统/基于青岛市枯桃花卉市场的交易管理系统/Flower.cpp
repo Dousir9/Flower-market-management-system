@@ -39,7 +39,7 @@ void Flower::ModifyFlowerPrice(const float &f_price) {
     flower_price = f_price;
 }
 //修改花卉数量
-void Flower::ModifyFlowerNumber(const float &f_number) {
+void Flower::ModifyFlowerNumber(const int &f_number) {
     flower_number = f_number;
 }
 //修改花卉上架日期

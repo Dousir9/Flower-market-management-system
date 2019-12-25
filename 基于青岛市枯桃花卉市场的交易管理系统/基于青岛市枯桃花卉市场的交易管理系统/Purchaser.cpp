@@ -24,14 +24,6 @@ Purchaser::Purchaser(const string &user_name, const string &password) : User(use
     LinkList = NULL;
     log_success = false;
 }
-//修改登录状态
-void Purchaser::ModifyLogStatus(bool judge) {
-    log_success = judge;
-}
-//是否登录成功，登录成功返回true，失败返回false
-bool Purchaser::IsLogSuccess() {
-    return log_success;
-}
 //买家注册
 void Purchaser::Logging() {
     cout<<endl<<TT<<TT;
@@ -799,9 +791,10 @@ const int Purchaser::DateCompare(int yy1, int mm1, int dd1, int yy2, int mm2, in
                     else
                         sum += 28;
             }
-            sum += dd2 - 1;
-            return sum;
+            mm1++;
         }
+        sum += dd2 - 1;
+        return sum;
     }
     else if (mm1 < mm2) {
         switch (mm1) {
@@ -848,6 +841,7 @@ const int Purchaser::DateCompare(int yy1, int mm1, int dd1, int yy2, int mm2, in
                     else
                         sum += 28;
             }
+            mm1++;
         }
         mm1 = 1;
         if(mm1 < mm2-1){

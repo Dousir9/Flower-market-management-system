@@ -127,6 +127,10 @@ void HashTable::AddFlower(LNode* &p, int times) {
         //探测次数加1，再次探测
         else {
             ++times;
+            if (times == HASH_MAX) { //哈希函数阈值
+                cout << "需重写哈希函数" << endl;
+                exit(0);
+            }
             AddFlower(p, times);
         }
     }
@@ -172,7 +176,7 @@ int HashTable::SearchFlower(string &flower_name, int times) {
         //探测次数加1，再次探测
         else {
             ++times;
-            if (times == 20) //若不存在或者哈希函数不够好返回-1
+            if (times == HASH_MAX) //若不存在或者哈希函数不够好返回-1
                 return -1;
             return SearchFlower(flower_name, times);
         }

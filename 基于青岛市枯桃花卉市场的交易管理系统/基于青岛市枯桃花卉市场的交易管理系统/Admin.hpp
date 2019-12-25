@@ -32,7 +32,6 @@ class Admin : public Merchant, public Purchaser {
     void ClearAd2(char ch); //广告置空，设置新的广告前先将广告置空;
     void MerchantRetrievePassword(); //商家找回密码
     void PurchaserRetrievePassword(); //买家找回密码
-    void ClearAnnouncement(); //清空公告
  private:
     const string admin_password = ADMIN_PASSERWORD; //管理员密码
 };

@@ -21,14 +21,6 @@ Merchant::Merchant(const string &user_name, const string &password, const string
     this->shop_name = shop_name;
     log_success = false;
 }
-//修改登录状态
-void Merchant::ModifyLogStatus(bool judge) {
-    log_success = judge;
-}
-//是否登录成功，登录成功返回true，失败返回false
-bool Merchant::IsLogSuccess() {
-    return log_success;
-}
 //商家入驻
 void Merchant::Logging() {
     cout<<endl<<TT<<TT;
@@ -338,9 +330,10 @@ const int Merchant::FlowerDateCompare(int yy1, int mm1, int dd1, int yy2, int mm
                     else
                         sum += 28;
             }
-            sum += dd2 - 1;
-            return sum;
+            mm1++;
         }
+        sum += dd2 - 1;
+        return sum;
     }
     else if (mm1 < mm2) {
         switch (mm1) {
@@ -387,6 +380,7 @@ const int Merchant::FlowerDateCompare(int yy1, int mm1, int dd1, int yy2, int mm
                     else
                         sum += 28;
             }
+            mm1++;
         }
         mm1 = 1;
         if(mm1 < mm2-1){

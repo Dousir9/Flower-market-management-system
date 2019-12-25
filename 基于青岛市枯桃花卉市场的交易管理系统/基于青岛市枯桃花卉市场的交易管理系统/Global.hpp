@@ -16,6 +16,7 @@ using namespace std;
 
 //关于哈希表
 const int MAXSIZE = 500; //哈希表长度
+const int HASH_MAX = 20; //哈希函数阈值
 
 //关于管理员
 const string ADMIN_PASSERWORD = "12345"; //管理员密码

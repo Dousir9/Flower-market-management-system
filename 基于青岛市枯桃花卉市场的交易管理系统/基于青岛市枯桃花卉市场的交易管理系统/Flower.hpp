@@ -23,7 +23,7 @@ class Flower {
     Flower(string &f_name, string &s_name, string &f_color, float f_price, int f_number, int yy, int mm, int dd);//进行初始化的构造函数
     void SetFlowerInfo(string &f_name, string &s_name, string &f_color, float f_price, int f_number, int yy, int mm, int dd); //设置花卉信息
     void ModifyFlowerPrice(const float &f_price); //修改花卉价格
-    void ModifyFlowerNumber(const float &f_number); //修改花卉数量
+    void ModifyFlowerNumber(const int &f_number); //修改花卉数量
     void ModifyFlowerDate(int yy, int mm, int dd); //修改花卉上架日期
     void ModifyPetalColor(const string &f_color); //修改花卉的花瓣颜色
     const string& FlowerNameInfo() const; //返回花卉名称

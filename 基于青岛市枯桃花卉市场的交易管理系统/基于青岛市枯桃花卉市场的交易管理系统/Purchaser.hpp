@@ -35,8 +35,6 @@ public:
     void RecommendFlower() const; //花卉推荐
     const int DateCompare(int yy1, int mm1, int dd1, int yy2, int mm2, int dd2) const; //比较日期返回差值(yy2/mm2/dd2 - yy1/mm1/dd1)
     void NavigateShopAddress() const; //花店地址导航
-    void ModifyLogStatus(bool judge);
-    bool IsLogSuccess();
     LNode* MergeList1(LNode *L1, LNode *L2) const; //价格归并排序
     LNode* MergeSort1(LNode *head) const;          //价格归并排序
     LNode* MergeList2(LNode *L1, LNode *L2) const; //数量归并排序
@@ -45,7 +43,6 @@ public:
     LNode* MergeSort3(LNode *head) const;          //日期归并排序
 private:
     LNode *LinkList; //存放预约的花卉的链表
-    bool log_success;
 };
 
 #endif /* Purchaser_hpp */

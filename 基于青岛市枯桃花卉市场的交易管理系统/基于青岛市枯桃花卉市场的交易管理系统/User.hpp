@@ -25,6 +25,10 @@ class User {
     User(); //默认构造函数
     User(const string &user_name, const string &password); //构造函数
     const string& UserNameInfo() const; //返回返回用户名，用于对应买家文件名
+    void ModifyLogStatus(bool judge); //修改登录状态
+    bool IsLogSuccess(); //是否登录成功，登录成功返回true，失败返回false
+protected:
+    bool log_success; //判断是否登录成功
  private:
     string user_name; //用户名
     string password; //密码

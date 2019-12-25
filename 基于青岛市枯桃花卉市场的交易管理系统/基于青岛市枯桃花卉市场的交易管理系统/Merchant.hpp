@@ -38,11 +38,8 @@ public:
     void AutoDiscountFlower() const; //花卉自动折扣
     const int FlowerDateCompare(int yy1, int mm1, int dd1, int yy2, int mm2, int dd2) const;
     string& ShopNameInfo(); //返回花店名信息
-    void ModifyLogStatus(bool judge); //修改登录状态
-    bool IsLogSuccess(); //是否登录成功，登录成功返回true，失败返回false
 private:
     string shop_name; //花店名
-    bool log_success; //判断是否登录成功
 };
 
 #endif /* Merchant_hpp */

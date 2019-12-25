@@ -22,3 +22,11 @@ User::User(const string &user_name, const string &password) {
 const string& User::UserNameInfo() const {
     return user_name;
 }
+//修改登录状态
+void User::ModifyLogStatus(bool judge) {
+    log_success = judge;
+}
+//是否登录成功，登录成功返回true，失败返回false
+bool User::IsLogSuccess() {
+    return log_success;
+}
